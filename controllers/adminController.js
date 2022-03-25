@@ -43,7 +43,7 @@ exports.loginStaff = (req, res, next) => {loginMainStaff({req,res,next})}
 
 exports.createComplain = async(req,res,next) => {
   const result = await complainActivity.create({req,res,next})
-  res.json(result)
+  res.json({success:true,result})
 }
 
 exports.getAllComplain = async (req,res,next) => {
